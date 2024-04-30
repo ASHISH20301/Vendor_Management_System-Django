@@ -26,20 +26,28 @@ python manage.py runserver
 ## API Endpoints
 
 ### Vendor Endpoints
-POST /api/vendors/: Create a new vendor.
-GET /api/vendors/: List all vendors.
-GET /api/vendors/{vendor_id}/: Retrieve details of a specific vendor.
-PUT /api/vendors/{vendor_id}/: Update a vendor's details.
-DELETE /api/vendors/{vendor_id}/: Delete a vendor.
+i)POST /api/vendors/: Create a new vendor.
+
+ii)GET /api/vendors/: List all vendors.
+
+iii)GET /api/vendors/{vendor_id}/: Retrieve details of a specific vendor.
+
+iv)PUT /api/vendors/{vendor_id}/: Update a vendor's details.
+
+v)DELETE /api/vendors/{vendor_id}/: Delete a vendor.
 
 ### Purchase Order Endpoints
-POST /api/purchase_orders/: Create a new purchase order.
-GET /api/purchase_orders/: List all purchase orders with an option to filter by vendor.
-GET /api/purchase_orders/{po_id}/: Retrieve details of a specific purchase order.
-PUT /api/purchase_orders/{po_id}/: Update a purchase order.
-DELETE /api/purchase_orders/{po_id}/: Delete a purchase order.
+i)POST /api/purchase_orders/: Create a new purchase order.
+
+ii)GET /api/purchase_orders/: List all purchase orders with an option to filter by vendor.
+
+iii)GET /api/purchase_orders/{po_id}/: Retrieve details of a specific purchase order.
+
+iv)PUT /api/purchase_orders/{po_id}/: Update a purchase order.
+
+v)DELETE /api/purchase_orders/{po_id}/: Delete a purchase order.
 
 ### Vendor Performance Endpoint
-GET /api/vendors/{vendor_id}/performance/: Retrieve a vendor's performance metrics.
+i)GET /api/vendors/{vendor_id}/performance/: Retrieve a vendor's performance metrics.
 
 
