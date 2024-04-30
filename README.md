@@ -119,5 +119,10 @@ python manage.py runserver
 
 To use these endpoints, make HTTP requests to the specified URLs with appropriate request bodies and parameters.
 
+## Testing
 
+Test cases have been created to ensure the reliability and correctness of the API endpoints. You can run these tests using the following command:
+
+```bash
+python manage.py test
 
