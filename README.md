@@ -30,31 +30,94 @@ python manage.py runserver
 
 6. Access the API endpoints at 'http://localhost:8000/api/'.
 
+
 ## API Endpoints
 
-### Vendor Endpoints
-i)POST /api/vendors/: Create a new vendor.
+#### Create Vendor
 
-ii)GET /api/vendors/: List all vendors.
+**URL:** `/api/vendors/`  
+**Method:** `POST`  
+**Description:** Create a new vendor.  
+**Request Body:** JSON object containing vendor details (name, contact details, address, vendor code).  
+**Response:** JSON object representing the created vendor.  
 
-iii)GET /api/vendors/{vendor_id}/: Retrieve details of a specific vendor.
+#### Retrieve Vendor
 
-iv)PUT /api/vendors/{vendor_id}/: Update a vendor's details.
+**URL:** `/api/vendors/{vendor_id}/`  
+**Method:** `GET`  
+**Description:** Retrieve details of a specific vendor.  
+**Parameters:** `{vendor_id}` - ID of the vendor to retrieve.  
+**Response:** JSON object representing the retrieved vendor.  
 
-v)DELETE /api/vendors/{vendor_id}/: Delete a vendor.
+#### Update Vendor
 
-### Purchase Order Endpoints
-i)POST /api/purchase_orders/: Create a new purchase order.
+**URL:** `/api/vendors/{vendor_id}/`  
+**Method:** `PUT`  
+**Description:** Update details of a specific vendor.  
+**Parameters:** `{vendor_id}` - ID of the vendor to update.  
+**Request Body:** JSON object containing updated vendor details.  
+**Response:** JSON object representing the updated vendor.  
 
-ii)GET /api/purchase_orders/: List all purchase orders with an option to filter by vendor.
+#### Delete Vendor
 
-iii)GET /api/purchase_orders/{po_id}/: Retrieve details of a specific purchase order.
+**URL:** `/api/vendors/{vendor_id}/`  
+**Method:** `DELETE`  
+**Description:** Delete a specific vendor.  
+**Parameters:** `{vendor_id}` - ID of the vendor to delete.  
+**Response:** Empty response with HTTP status code 204 (No Content).  
 
-iv)PUT /api/purchase_orders/{po_id}/: Update a purchase order.
+#### List Purchase Orders
 
-v)DELETE /api/purchase_orders/{po_id}/: Delete a purchase order.
+**URL:** `/api/purchase_orders/`  
+**Method:** `GET`  
+**Description:** List all purchase orders with an option to filter by vendor.  
+**Parameters:** None (Optional query parameter `vendor_id` to filter by vendor).  
+**Response:** JSON array representing the list of purchase orders.  
 
-### Vendor Performance Endpoint
-i)GET /api/vendors/{vendor_id}/performance/: Retrieve a vendor's performance metrics.
+#### Create Purchase Order
+
+**URL:** `/api/purchase_orders/`  
+**Method:** `POST`  
+**Description:** Create a new purchase order.  
+**Request Body:** JSON object containing purchase order details (PO number, vendor ID, order date, delivery date, items, quantity, status).  
+**Response:** JSON object representing the created purchase order.  
+
+#### Retrieve Purchase Order
+
+**URL:** `/api/purchase_orders/{po_id}/`  
+**Method:** `GET`  
+**Description:** Retrieve details of a specific purchase order.  
+**Parameters:** `{po_id}` - ID of the purchase order to retrieve.  
+**Response:** JSON object representing the retrieved purchase order.  
+
+#### Update Purchase Order
+
+**URL:** `/api/purchase_orders/{po_id}/`  
+**Method:** `PUT`  
+**Description:** Update details of a specific purchase order.  
+**Parameters:** `{po_id}` - ID of the purchase order to update.  
+**Request Body:** JSON object containing updated purchase order details.  
+**Response:** JSON object representing the updated purchase order.  
+
+#### Delete Purchase Order
+
+**URL:** `/api/purchase_orders/{po_id}/`  
+**Method:** `DELETE`  
+**Description:** Delete a specific purchase order.  
+**Parameters:** `{po_id}` - ID of the purchase order to delete.  
+**Response:** Empty response with HTTP status code 204 (No Content).  
+
+#### Retrieve Vendor Performance Metrics
+
+**URL:** `/api/vendors/{vendor_id}/performance`  
+**Method:** `GET`  
+**Description:** Retrieve a vendor's performance metrics.  
+**Parameters:** `{vendor_id}` - ID of the vendor to retrieve performance metrics for.  
+**Response:** JSON object representing the vendor's performance metrics (on-time delivery rate, quality rating, response time, fulfilment rate).  
+
+## Usage
+
+To use these endpoints, make HTTP requests to the specified URLs with appropriate request bodies and parameters.
+
 
 
