@@ -5,22 +5,27 @@ This Vendor Management System API allows you to manage vendors, purchase orders,
 ## Setup Instructions
 
 1. Clone the repository:
+   
 git clone <repository_url>
 
 cd vendor_management_system_api
 
 2.Create and activate a virtual environment
+
 python3 -m venv venv
 
 source venv/bin/activate
 
 3. Install dependencies
+   
 pip install -r requirements.txt
 
 4. Run database migrations
+   
 python manage.py migrate
 
 5. Start the deployment server
+   
 python manage.py runserver
 
 6. Access the API endpoints at 'http://localhost:8000/api/'.
