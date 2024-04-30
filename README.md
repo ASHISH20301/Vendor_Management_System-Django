@@ -28,17 +28,17 @@ python manage.py migrate
 
 python manage.py createsuperuser
 
-6.Generate the authorization token by hitting the api:
+6. Start the deployment server
+   
+python manage.py runserver
+
+7.Generate the authorization token by hitting the api:
 
 http://127.0.0.1:8000/api-token-auth/
 
 Provide the json format in the body of the api
 {"username":"superuser_username",
 "password":"superuser_password"}
-
-7. Start the deployment server
-   
-python manage.py runserver
 
 8. Access the API endpoints at 'http://localhost:8000/api/'.
 
